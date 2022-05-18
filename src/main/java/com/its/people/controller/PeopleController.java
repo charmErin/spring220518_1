@@ -38,7 +38,7 @@ public class PeopleController {
 
     @PostMapping("/save1")
     public String save1(@RequestParam("name") String name,
-                       @RequestParam("age") int age) {
+                        @RequestParam("age") int age) {
         System.out.println("name = " + name + ", age = " + age);
 
         PeopleDTO peopleDTO = new PeopleDTO();
@@ -56,9 +56,9 @@ public class PeopleController {
 //        peopleDTO.setAge(age);
         System.out.println("peopleDTO = " + peopleDTO);
         boolean saveResult = peopleService.save1(peopleDTO);
-        
+
         // 저장 여부에 따라 보여줄 화면이 달라지게 함
-        if(saveResult) {
+        if (saveResult) {
             System.out.println("저장성공");
             return "index";
         } else {
