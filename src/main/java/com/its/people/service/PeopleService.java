@@ -5,6 +5,8 @@ import com.its.people.repository.PeopleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PeopleService {
 
@@ -23,5 +25,12 @@ public class PeopleService {
         } else {
             return false;
         }
+    }
+
+    public List<PeopleDTO> findAll() {
+        List<PeopleDTO> peopleDTOList = peopleRepository.findAll();
+        return peopleDTOList;
+
+        // return peopleRepository.findAll();
     }
 }

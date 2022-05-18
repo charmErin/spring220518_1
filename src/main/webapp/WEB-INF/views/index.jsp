@@ -13,5 +13,6 @@
 <body>
     <h2>index.jsp</h2>
     <a href="/save-form">링크 클릭하세요</a>
+    <a href="/findAll">List 페이지로 이동</a>
 </body>
 </html>

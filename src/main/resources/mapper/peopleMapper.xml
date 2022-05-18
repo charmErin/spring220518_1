@@ -7,7 +7,9 @@
     <insert id="save" parameterType="people">
         insert into people(name, age) values (#{name}, #{age})
     </insert>
-
+    <select id="findAll" resultType="people">
+        select * from people
+    </select>
 </mapper>
 
 
